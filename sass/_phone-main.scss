@@ -1,0 +1,161 @@
+.main {
+
+    display: flex;
+    flex-direction: column;
+    font-size: .9rem;
+
+    & > * {
+        padding: .5rem;
+        font-weight: 600;
+        border-radius: 1rem .5rem .5rem .1rem;
+        margin-left: .7rem;
+        margin-right: .7rem;
+
+        &:not(:last-child) {
+            margin-bottom: .7rem;
+            width: 15rem;
+        }
+    }
+
+    &__item {
+
+      &--1 {
+        background-color: rgba($grayish-blue, .3);
+        color: $moderate-violet;
+      }
+
+      &--2 {
+        background-color: rgba($grayish-blue, .3); 
+        color: $moderate-violet;
+    }
+
+    &--3 {
+        align-self: flex-end;   
+
+        display: flex;
+
+        & > * {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 1rem;
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            &:first-child{
+                margin-left: -2rem;
+            }
+        }
+    }
+
+    &--4 {
+        background-color: $color-white;  
+        align-self: flex-end; 
+        color: $violet-desaturated-dark;
+    }
+
+    &--5 {
+        background-color: $color-white;
+        align-self: flex-end; 
+        color: $violet-desaturated-dark; 
+    }
+
+    &--6 {
+        background-color: rgba($grayish-blue, .3);
+        color: $moderate-violet;
+    }
+}
+
+
+ .price {
+    width: 16rem;
+    padding: .7rem;
+    color: $light-gray-violet;
+    background-image: linear-gradient(to right , $light-magenta, $light-violet);
+    display: inline-block;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    input[type="radio"] {
+        visibility: hidden;
+        margin-right: 2rem;
+      
+
+        &::after {
+            content: "";
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            border: 2px solid $mangenta-lighter;
+            background-color: transparent;
+            visibility: visible;
+            position: absolute;
+            left: 9%;
+            top: 33.5%;
+        }
+
+        &:checked::after {
+            content: "";
+            background-color: $pale-violet;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background-color: $light-violet;
+            transition: all .2s ease;
+            border: 2px solid $mangenta-lighter;
+         }
+    }
+
+    .form__time {
+       margin-right: auto;
+       font-size: inherit;
+       font-weight: 600;
+    }
+
+    .form__price {
+       font-size: 2rem;
+       font-weight: 700;
+    }
+ }
+
+ &__form {
+     display: inline-block;
+     position: relative;
+     margin-top: 1.5rem;
+
+    input[type="text"] {
+        width: 100%;
+        outline: none;
+        border: none;
+        padding: 1.1rem;
+        border-radius: 3rem;
+    }
+
+    &--button {
+        display: inline-block;
+        outline: none;
+        border: none;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: $violet-desaturated-darker;
+        position: absolute;
+        left: 85%;
+        top: 20%;
+
+        &--icon {
+            width: 2rem;
+            height: 2rem;
+            fill: $color-white;
+            display: inline-block;
+        }
+    }
+
+}
+}
+
+

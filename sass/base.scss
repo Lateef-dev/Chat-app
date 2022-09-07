@@ -1,0 +1,93 @@
+// COLORS
+$pale-violet: hsl(276, 100%, 81%);
+$moderate-violet: hsl(276, 55%, 52%);
+$violet-desaturated-dark: hsl(271, 15%, 43%);
+$violet-desaturated-darker: hsl(271, 36%, 24%);
+$violet-gray: hsl(270, 7%, 64%);
+$light-violet: hsl(264, 100%, 61%);
+
+$light-magenta: hsl(293, 100%, 63%);
+$mangenta-lighter: hsl(289, 100%, 72%);
+
+$light-gray-violet: hsl(270, 20%, 96%);
+$grayish-blue: hsl(206, 6%, 79%);
+
+$color-white: hsl(0, 0%, 100%);
+$color-black: hsl(0, 0%, 0%);
+
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 56.25em;
+$bp-large: 37.5em;
+$bp-medium: 31.25em;
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 57%;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 52%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: $light-gray-violet;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Rubik', sans-serif;
+
+
+    &::before {
+        content: "";
+        height: 80rem;
+        width: 35%;
+        border-radius: 25.5rem;
+        background-image: linear-gradient(to top, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+        position: absolute;
+        bottom: 5rem;
+        left: -10.1rem;
+        z-index: -1;
+
+        @media only screen and (max-width: $bp-large) {
+            height: 70rem;
+            top: -20rem;
+            width: 50%;
+        }
+    }
+
+    &::after {
+        content: "";
+        height: 100rem;
+        width: 30%;
+        border-radius: 25.5rem;
+        background-color: rgba($pale-violet, .08);
+        position: absolute;
+        right: -8rem;
+        top: 11.9rem;
+        z-index: -1;
+
+        @media only screen and (max-width: $bp-medium) {
+            height: 50rem;
+            top: 40rem;
+            width: 40%;
+        }
+    }
+}
